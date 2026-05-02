@@ -1,0 +1,15 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Echo Hi
+
+on:
+  workflow_dispatch:
+
+jobs:
+  say-hi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run greeting
+        run: echo "hi"
+      - name: Run goodbye
+        run: echo "done, bye!"
