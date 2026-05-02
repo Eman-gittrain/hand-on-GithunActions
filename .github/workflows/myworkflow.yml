@@ -1,19 +1,54 @@
-# This is a basic workflow to help you get started with Actions
+write simple github workflow to echi hi , run on ubunto latest and on workflow dispatchyamlname: Greet User
 
-name: my-first-workflow
+on:
+  workflow_dispatch:
 
-# Controls when the workflow will run
-on: workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:        
-  first-job:
-    # The type of runner that the job will run on
+jobs:
+  say-hi:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: greeting
+      - name: Hello Step
+        run: echo "hi"
+Use code with caution.To run this, just save it as a .yml file in your repository's .github/workflows/ folder. You can then trigger it manually from the Actions tab.Would you like to add an input so you can customize who the workflow says "hi" to?3 sitesWorkflow syntax for GitHub ActionsAbout YAML syntax for workflows
+
+Workflow files use YAML syntax, and must have either a . yml or . yaml file extension. If you're ...GitHub DocsHow to set up automatic deployments with DeployHQ’s GitHub ActionSep 29, 2025 — With these secrets added to your repository configuration, copy the following YAML file contents and save them into your repositor...DeployHQSimple CI/CD setup for your Netlify website using Github actionsApr 17, 2023 — The main action — GitHub actions Navigate the actions tab of your git repository and click on the new workflow. The GitHub workflo...Mediumrewrite yaml combining the 2 steps in on lineyamlname: Greet User
+
+on:
+  workflow_dispatch:
+
+jobs:
+  say-hi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello Step
+        run: echo "hi"
+Use code with caution.(Note: In GitHub Actions YAML, the name and run are distinct properties of a step and cannot be merged into a single line; however, the run command itself is already a single-line operation.)Would you like to see how to add a second command to that same line using &&?1 siteWorkflow syntax for GitHub ActionsWorkflow syntax for GitHub Actions 
+   
+   - About YAML syntax for workflows. 
+   - name. 
+   - run-name. 
+   - on. 
+   - on.<even...GitHub Docsrewrite yaml combining 2 steps in one run: echo hi then echo byeyamlname: Greet User
+
+on:
+  workflow_dispatch:
+
+jobs:
+  say-hi-bye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet and Part
+        run: echo "hi" && echo "bye"
+Use code with caution.In this version, the && operator ensures that echo "bye" only runs if the first command succeeds.Would you like to know how to use multi-line blocks if your commands get longer?rewrite yaml combining 2 steps as multi line step with pipe '|' in one run: echo hi then echo byeyamlname: Greet User
+
+on:
+  workflow_dispatch:
+
+jobs:
+  say-hi-bye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet and Part
         run: |
-            echo "First output"
-            echo "Second output"
+          echo "hi"
+          echo "bye"
