@@ -15,5 +15,5 @@ jobs:
     steps:
       - name: greeting
         run: |
-             echo Hello, world!
-             echo "i am done, bye!"
+            echo "First output"
+            echo "Second output"
